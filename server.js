@@ -31,6 +31,6 @@ app.get('/webhook', function (req, res) {
 app.set('port', process.env.PORT || 3002);
 app.set('ip', process.env.IP || "127.0.0.1");
 
-server.listen(app.get('port'), app.get('ip'), function () {
-  console.log("Chat bot server listening at %s:%d ", app.get('ip'), app.get('port'));
+server.listen(process.env.PORT || 3002, app.get('ip'), function () {
+  console.log("Chat bot server listening at %s:%d ", app.get('ip'), process.env.PORT || 3002);
 });
